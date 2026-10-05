@@ -3,25 +3,240 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gimbona</title>
+  <title>Disk Cleanup for Windows 10 &amp; 11: Free Up Disk Space – Gimbona</title>
+  <meta name="description" content="Gimbona is a safe disk cleanup and disk space analyzer for Windows. Clean junk files and caches, find large files, remove unused programs, shrink WSL disks.">
+  <link rel="canonical" href="https://aliyalinkilic.github.io/gimbona/">
+  <link rel="alternate" hreflang="en" href="https://aliyalinkilic.github.io/gimbona/">
+  <link rel="alternate" hreflang="tr" href="https://aliyalinkilic.github.io/gimbona/tr/">
+  <link rel="alternate" hreflang="de" href="https://aliyalinkilic.github.io/gimbona/de/">
+  <link rel="alternate" hreflang="es" href="https://aliyalinkilic.github.io/gimbona/es/">
+  <link rel="alternate" hreflang="fr" href="https://aliyalinkilic.github.io/gimbona/fr/">
+  <link rel="alternate" hreflang="x-default" href="https://aliyalinkilic.github.io/gimbona/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Disk Cleanup for Windows 10 &amp; 11: Free Up Disk Space – Gimbona">
+  <meta property="og:description" content="Gimbona is a safe disk cleanup and disk space analyzer for Windows. Clean junk files and caches, find large files, remove unused programs, shrink WSL disks.">
+  <meta property="og:url" content="https://aliyalinkilic.github.io/gimbona/">
+  <meta property="og:image" content="https://aliyalinkilic.github.io/gimbona/img/en/01-overview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="./img/icon.png">
+  <script type="application/ld+json">
+{
+    "@context":  "https://schema.org",
+    "@graph":  [
+                   {
+                       "@type":  "SoftwareApplication",
+                       "name":  "Gimbona",
+                       "description":  "Gimbona is a safe disk cleanup and disk space analyzer for Windows. Clean junk files and caches, find large files, remove unused programs, shrink WSL disks.",
+                       "url":  "https://aliyalinkilic.github.io/gimbona/",
+                       "image":  "https://aliyalinkilic.github.io/gimbona/img/icon.png",
+                       "screenshot":  [
+                                          "https://aliyalinkilic.github.io/gimbona/img/en/01-overview.png",
+                                          "https://aliyalinkilic.github.io/gimbona/img/en/02-clean.png",
+                                          "https://aliyalinkilic.github.io/gimbona/img/en/03-analyze.png",
+                                          "https://aliyalinkilic.github.io/gimbona/img/en/04-virtual-disks.png"
+                                      ],
+                       "operatingSystem":  "Windows 10, Windows 11",
+                       "applicationCategory":  "UtilitiesApplication",
+                       "inLanguage":  [
+                                          "en",
+                                          "tr",
+                                          "de",
+                                          "es",
+                                          "fr"
+                                      ],
+                       "installUrl":  "https://apps.microsoft.com/detail/9NVVCPPHHFJR?cid=website\u0026hl=en-US",
+                       "offers":  {
+                                      "@type":  "Offer",
+                                      "price":  "0",
+                                      "priceCurrency":  "USD"
+                                  },
+                       "author":  {
+                                      "@type":  "Person",
+                                      "name":  "Ali Yalınkılıç"
+                                  }
+                   },
+                   {
+                       "@type":  "FAQPage",
+                       "inLanguage":  "en",
+                       "mainEntity":  [
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "My C drive is full. What can I delete safely?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Start with the items Gimbona marks as Safe: temporary files, caches, crash dumps and Windows Update leftovers. Windows and your apps rebuild them when needed. The scan shows how much each item would free before anything is deleted."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Is it safe to delete temporary files and caches?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Yes for the items marked Safe; apps recreate them, at most a first start is a little slower. Items marked Review are also safe to delete, but something will have to be downloaded or built again. Items marked Advanced are for people who know what they are."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Why is my WSL or Docker disk (ext4.vhdx) still huge after I deleted files?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "A VHDX file grows when data is written but does not shrink when data is deleted. Compacting the disk returns that free space to Windows. Gimbona shows how much a WSL disk can give back, and Gimbona Pro compacts it; WSL is shut down while this runs, and Gimbona tells you before it starts."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Does Gimbona delete anything on its own?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "No. Scanning only measures, and cleaning starts only when you confirm. Automatic cleanup is an optional Pro setting that is off by default and cleans only Safe items."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Is Gimbona free?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Yes. Disk analysis and the cleanup of Windows, browser and app files are free. Gimbona Pro adds virtual disk compaction, developer and game caches, bulk removal and automatic cleanup for a one-time payment, with no subscription."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Does Gimbona send my data anywhere?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "No. Scanning and cleaning happen only on your PC. Gimbona has no analytics, telemetry or advertising."
+                                                                 }
+                                          }
+                                      ]
+                   }
+               ]
+}
+  </script>
   <style>
-    :root { color-scheme: light dark; --text: #1b1f23; --muted: #57606a; --accent: #0e7c86; --bg: #ffffff; }
+    :root { color-scheme: light dark; --text: #1b1f23; --muted: #57606a; --accent: #0e7c86; --accent-text: #ffffff; --bg: #ffffff; --card: #f6f8fa; --line: #d8dee4; }
     @media (prefers-color-scheme: dark) {
-      :root { --text: #e6edf3; --muted: #9da7b1; --accent: #4fd1c5; --bg: #0d1117; }
+      :root { --text: #e6edf3; --muted: #9da7b1; --accent: #4fd1c5; --accent-text: #0d1117; --bg: #0d1117; --card: #161b22; --line: #30363d; }
     }
+    * { box-sizing: border-box; }
     body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 "Segoe UI", system-ui, sans-serif; }
-    main { max-width: 760px; margin: 0 auto; padding: 64px 16px; }
-    h1 { font-size: 32px; margin: 0 0 8px; }
+    main { max-width: 920px; margin: 0 auto; padding: 48px 16px 32px; }
+    header.top { display: flex; align-items: center; gap: 12px; margin-bottom: 40px; }
+    header.top img { width: 40px; height: 40px; }
+    header.top strong { font-size: 20px; }
+    nav.languages { margin-left: auto; display: flex; gap: 12px; flex-wrap: wrap; font-size: 14px; }
+    h1 { font-size: 36px; line-height: 1.2; margin: 0 0 16px; }
+    h2 { font-size: 24px; margin: 48px 0 12px; }
+    h3 { font-size: 16px; margin: 24px 0 8px; letter-spacing: .02em; }
     p { margin: 8px 0; }
     a { color: var(--accent); }
-    .muted { color: var(--muted); }
+    .lead { font-size: 18px; color: var(--muted); max-width: 720px; }
+    .cta { display: inline-block; margin: 24px 0 8px; padding: 12px 22px; border-radius: 8px; background: var(--accent); color: var(--accent-text); font-weight: 600; text-decoration: none; }
+    .note { color: var(--muted); font-size: 14px; }
+    .shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 32px 0 0; }
+    .shots img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; display: block; }
+    ul { padding-left: 20px; margin: 8px 0; }
+    li { margin: 4px 0; }
+    .features { columns: 2; column-gap: 32px; }
+    @media (max-width: 640px) {
+      .features { columns: 1; }
+      .shots { grid-template-columns: 1fr; }
+      h1 { font-size: 28px; }
+      header.top { flex-wrap: wrap; margin-bottom: 24px; }
+      nav.languages { margin-left: 0; width: 100%; }
+    }
+    .faq { border: 1px solid var(--line); border-radius: 8px; padding: 4px 16px 12px; margin: 12px 0; background: var(--card); }
+    .faq h3 { margin-top: 12px; }
+    footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
   </style>
 </head>
 <body>
 <main>
-  <h1>Gimbona</h1>
-  <p>Free up disk space: safe cleanup and space analysis for Windows.</p>
-  <p class="muted"><a href="privacy/">Privacy Policy</a> · <a href="mailto:aliyalinkilic@outlook.com">aliyalinkilic@outlook.com</a></p>
+  <header class="top">
+    <img src="./img/icon.png" alt="" width="40" height="40">
+    <strong>Gimbona</strong>
+    <nav class="languages" aria-label="Languages">
+      <span aria-current="page">English</span>
+      <a href="./tr/" lang="tr" hreflang="tr">Türkçe</a>
+      <a href="./de/" lang="de" hreflang="de">Deutsch</a>
+      <a href="./es/" lang="es" hreflang="es">Español</a>
+      <a href="./fr/" lang="fr" hreflang="fr">Français</a>
+    </nav>
+  </header>
+
+  <h1>Disk cleanup for Windows: free up disk space safely</h1>
+  <p class="lead">C drive full? Gimbona shows what is filling your drive and helps you clean it up: junk files, temporary files, caches, Windows Update leftovers, large and duplicate files, unused programs and virtual disks that only ever grow. Scanning only measures; nothing is deleted until you confirm.</p>
+  <a class="cta" href="https://apps.microsoft.com/detail/9NVVCPPHHFJR?cid=website&amp;hl=en-US">Get Gimbona from the Microsoft Store</a>
+  <p class="note">Free for Windows 10 and Windows 11. Gimbona Pro is an optional one-time purchase, no subscription.</p>
+
+  <div class="shots">
+    <img src="./img/en/01-overview.png" alt="Gimbona overview: disk space that can be freed on Windows" width="1440" height="900">
+    <img src="./img/en/02-clean.png" alt="Gimbona disk cleanup: junk files, temporary files and caches with safety levels" width="1440" height="900" loading="lazy">
+    <img src="./img/en/03-analyze.png" alt="Gimbona disk space analyzer: folders by size" width="1440" height="900" loading="lazy">
+    <img src="./img/en/04-virtual-disks.png" alt="Gimbona virtual disks: WSL, Docker and Hyper-V disk sizes" width="1440" height="900" loading="lazy">
+  </div>
+
+  <h2>Features</h2>
+  <ul class="features">
+    <li>Disk cleanup with a safety level for every item: Safe, Review, Advanced</li>
+    <li>Scanning only measures; nothing is deleted without your confirmation</li>
+    <li>Junk file, temp file and cache cleaner for Windows, browsers and apps</li>
+    <li>Disk space analyzer by folder, with the largest files</li>
+    <li>Large and old file finder</li>
+    <li>Duplicate file finder</li>
+    <li>Leftovers of uninstalled programs</li>
+    <li>Installed programs by size and last run</li>
+    <li>Bulk uninstaller for unused programs (Pro)</li>
+    <li>Compact WSL, Docker and Hyper-V virtual disks (Pro)</li>
+    <li>Developer and game cache cleanup (Pro)</li>
+    <li>Automatic weekly or monthly cleanup (Pro)</li>
+    <li>Windows component store (WinSxS) and hibernation file cleanup (Pro)</li>
+    <li>No data collection; everything stays on your PC</li>
+    <li>English, German, Spanish, French and Turkish</li>
+    <li>Dark, light and turquoise themes</li>
+  </ul>
+
+  <h2>What Gimbona cleans</h2>
+  <h3>Junk file, temp file and cache cleaner</h3>
+  <p>Gimbona finds Windows temporary files, crash dumps, thumbnail and shader caches and Windows Update leftovers, and the caches of browsers (Chrome, Edge, Firefox, Brave, Opera) and apps such as VS Code, Discord, Slack and Spotify. Every item shows how much space it takes and carries a safety level: Safe, Review or Advanced.</p>
+  <h3>Disk space analyzer, large file finder and duplicate file finder</h3>
+  <p>See which folders and files take up your drive, largest first. Search your personal folders for large and old files and for duplicate files, and look for folders that uninstalled programs left behind. Searching only lists; what you select is moved to the Recycle Bin, where you can restore it.</p>
+  <h3>Shrink WSL, Docker and Hyper-V disks (VHDX)</h3>
+  <p>Virtual disks grow as data is written to them but do not shrink when data is deleted. Gimbona lists the disks of WSL, Docker Desktop, Hyper-V, VirtualBox, VMware and Android emulators with their sizes, and Gimbona Pro compacts ext4.vhdx and other dynamic VHDX and VHD files to return the free space inside them to Windows. The files inside the disk are not touched.</p>
+  <h3>Uninstall programs you no longer use</h3>
+  <p>See your installed programs by size and remove them. When Gimbona runs as administrator it also shows which programs have not been run for 3, 6 or 12 months. Removing one program at a time is free; Gimbona Pro removes several in one go. Drivers, runtimes and security software are not listed, so they cannot be removed by mistake.</p>
+  <h3>Safe by design</h3>
+  <p>After a scan only the Safe items are selected; Advanced items are never selected by default. Gimbona checks the health of your disk first: if Windows reports that the drive needs repair, cleaning is paused. It does not collect your data or send it anywhere.</p>
+
+  <h2>Questions and answers</h2>
+  <div class="faq">
+    <h3>My C drive is full. What can I delete safely?</h3>
+    <p>Start with the items Gimbona marks as Safe: temporary files, caches, crash dumps and Windows Update leftovers. Windows and your apps rebuild them when needed. The scan shows how much each item would free before anything is deleted.</p>
+  </div>
+  <div class="faq">
+    <h3>Is it safe to delete temporary files and caches?</h3>
+    <p>Yes for the items marked Safe; apps recreate them, at most a first start is a little slower. Items marked Review are also safe to delete, but something will have to be downloaded or built again. Items marked Advanced are for people who know what they are.</p>
+  </div>
+  <div class="faq">
+    <h3>Why is my WSL or Docker disk (ext4.vhdx) still huge after I deleted files?</h3>
+    <p>A VHDX file grows when data is written but does not shrink when data is deleted. Compacting the disk returns that free space to Windows. Gimbona shows how much a WSL disk can give back, and Gimbona Pro compacts it; WSL is shut down while this runs, and Gimbona tells you before it starts.</p>
+  </div>
+  <div class="faq">
+    <h3>Does Gimbona delete anything on its own?</h3>
+    <p>No. Scanning only measures, and cleaning starts only when you confirm. Automatic cleanup is an optional Pro setting that is off by default and cleans only Safe items.</p>
+  </div>
+  <div class="faq">
+    <h3>Is Gimbona free?</h3>
+    <p>Yes. Disk analysis and the cleanup of Windows, browser and app files are free. Gimbona Pro adds virtual disk compaction, developer and game caches, bulk removal and automatic cleanup for a one-time payment, with no subscription.</p>
+  </div>
+  <div class="faq">
+    <h3>Does Gimbona send my data anywhere?</h3>
+    <p>No. Scanning and cleaning happen only on your PC. Gimbona has no analytics, telemetry or advertising.</p>
+  </div>
+
+  <footer>
+    <p><a href="https://apps.microsoft.com/detail/9NVVCPPHHFJR?cid=website&amp;hl=en-US">Get Gimbona from the Microsoft Store</a> · <a href="./privacy/#en">Privacy Policy</a> · <a href="mailto:aliyalinkilic@outlook.com">aliyalinkilic@outlook.com</a></p>
+    <p>© 2026 Ali Yalınkılıç</p>
+  </footer>
 </main>
 </body>
 </html>

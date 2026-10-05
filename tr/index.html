@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Disk Temizleme Programı: Windows 10 ve 11'de Yer Açın – Gimbona</title>
+  <meta name="description" content="Gimbona, Windows için güvenli disk temizleme ve disk analizi programı. Gereksiz dosyaları, önbellekleri temizleyin, büyük dosyaları bulun, C diskinde yer açın.">
+  <link rel="canonical" href="https://aliyalinkilic.github.io/gimbona/tr/">
+  <link rel="alternate" hreflang="en" href="https://aliyalinkilic.github.io/gimbona/">
+  <link rel="alternate" hreflang="tr" href="https://aliyalinkilic.github.io/gimbona/tr/">
+  <link rel="alternate" hreflang="de" href="https://aliyalinkilic.github.io/gimbona/de/">
+  <link rel="alternate" hreflang="es" href="https://aliyalinkilic.github.io/gimbona/es/">
+  <link rel="alternate" hreflang="fr" href="https://aliyalinkilic.github.io/gimbona/fr/">
+  <link rel="alternate" hreflang="x-default" href="https://aliyalinkilic.github.io/gimbona/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Disk Temizleme Programı: Windows 10 ve 11'de Yer Açın – Gimbona">
+  <meta property="og:description" content="Gimbona, Windows için güvenli disk temizleme ve disk analizi programı. Gereksiz dosyaları, önbellekleri temizleyin, büyük dosyaları bulun, C diskinde yer açın.">
+  <meta property="og:url" content="https://aliyalinkilic.github.io/gimbona/tr/">
+  <meta property="og:image" content="https://aliyalinkilic.github.io/gimbona/img/tr/01-overview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../img/icon.png">
+  <script type="application/ld+json">
+{
+    "@context":  "https://schema.org",
+    "@graph":  [
+                   {
+                       "@type":  "SoftwareApplication",
+                       "name":  "Gimbona",
+                       "description":  "Gimbona, Windows için güvenli disk temizleme ve disk analizi programı. Gereksiz dosyaları, önbellekleri temizleyin, büyük dosyaları bulun, C diskinde yer açın.",
+                       "url":  "https://aliyalinkilic.github.io/gimbona/tr/",
+                       "image":  "https://aliyalinkilic.github.io/gimbona/img/icon.png",
+                       "screenshot":  [
+                                          "https://aliyalinkilic.github.io/gimbona/img/tr/01-overview.png",
+                                          "https://aliyalinkilic.github.io/gimbona/img/tr/02-clean.png",
+                                          "https://aliyalinkilic.github.io/gimbona/img/tr/03-analyze.png",
+                                          "https://aliyalinkilic.github.io/gimbona/img/tr/04-virtual-disks.png"
+                                      ],
+                       "operatingSystem":  "Windows 10, Windows 11",
+                       "applicationCategory":  "UtilitiesApplication",
+                       "inLanguage":  [
+                                          "en",
+                                          "tr",
+                                          "de",
+                                          "es",
+                                          "fr"
+                                      ],
+                       "installUrl":  "https://apps.microsoft.com/detail/9NVVCPPHHFJR?cid=website\u0026hl=tr-TR",
+                       "offers":  {
+                                      "@type":  "Offer",
+                                      "price":  "0",
+                                      "priceCurrency":  "USD"
+                                  },
+                       "author":  {
+                                      "@type":  "Person",
+                                      "name":  "Ali Yalınkılıç"
+                                  }
+                   },
+                   {
+                       "@type":  "FAQPage",
+                       "inLanguage":  "tr",
+                       "mainEntity":  [
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "C diski doldu, neyi güvenle silebilirim?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Gimbona\u0027nın Güvenli olarak işaretlediği kalemlerle başlayın: geçici dosyalar, önbellekler, çökme dökümleri ve Windows Update artıkları. Windows ve uygulamalarınız bunları gerektiğinde yeniden oluşturur. Tarama, hiçbir şey silinmeden önce her kalemin ne kadar yer açacağını gösterir."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Geçici dosyaları ve önbellekleri silmek güvenli mi?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Güvenli olarak işaretlenen kalemler için evet; uygulamalar bunları yeniden oluşturur, en fazla ilk açılış biraz yavaşlar. Gözden geçir kalemlerini silmek de güvenlidir ama bir şeyin yeniden indirilmesi ya da derlenmesi gerekir. İleri düzey kalemler ne olduklarını bilenler içindir."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Dosya sildiğim halde WSL ya da Docker diski (ext4.vhdx) neden küçülmüyor?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "VHDX dosyası veri yazıldıkça büyür ama veri silinince küçülmez. Diski sıkıştırmak bu boş alanı Windows\u0027a geri verir. Gimbona bir WSL diskinden ne kadar yer kazanılabileceğini gösterir, Gimbona Pro da diski sıkıştırır; işlem sırasında WSL kapatılır ve Gimbona bunu başlamadan önce size bildirir."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Gimbona kendiliğinden bir şey siler mi?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Hayır. Tarama yalnızca ölçer, temizlik yalnızca siz onaylayınca başlar. Otomatik temizlik isteğe bağlı bir Pro ayarıdır; varsayılan olarak kapalıdır ve yalnızca Güvenli kalemleri temizler."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Gimbona ücretsiz mi?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Evet. Disk analizi ile Windows, tarayıcı ve uygulama dosyalarının temizliği ücretsizdir. Gimbona Pro sanal disk sıkıştırma, geliştirici ve oyun önbellekleri, toplu kaldırma ve otomatik temizlik ekler; tek seferlik ödeme, abonelik yok."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Gimbona verilerimi bir yere gönderiyor mu?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Hayır. Tarama ve temizlik yalnızca bilgisayarınızda yapılır. Gimbona\u0027da analiz, telemetri ya da reklam yoktur."
+                                                                 }
+                                          }
+                                      ]
+                   }
+               ]
+}
+  </script>
+  <style>
+    :root { color-scheme: light dark; --text: #1b1f23; --muted: #57606a; --accent: #0e7c86; --accent-text: #ffffff; --bg: #ffffff; --card: #f6f8fa; --line: #d8dee4; }
+    @media (prefers-color-scheme: dark) {
+      :root { --text: #e6edf3; --muted: #9da7b1; --accent: #4fd1c5; --accent-text: #0d1117; --bg: #0d1117; --card: #161b22; --line: #30363d; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 "Segoe UI", system-ui, sans-serif; }
+    main { max-width: 920px; margin: 0 auto; padding: 48px 16px 32px; }
+    header.top { display: flex; align-items: center; gap: 12px; margin-bottom: 40px; }
+    header.top img { width: 40px; height: 40px; }
+    header.top strong { font-size: 20px; }
+    nav.languages { margin-left: auto; display: flex; gap: 12px; flex-wrap: wrap; font-size: 14px; }
+    h1 { font-size: 36px; line-height: 1.2; margin: 0 0 16px; }
+    h2 { font-size: 24px; margin: 48px 0 12px; }
+    h3 { font-size: 16px; margin: 24px 0 8px; letter-spacing: .02em; }
+    p { margin: 8px 0; }
+    a { color: var(--accent); }
+    .lead { font-size: 18px; color: var(--muted); max-width: 720px; }
+    .cta { display: inline-block; margin: 24px 0 8px; padding: 12px 22px; border-radius: 8px; background: var(--accent); color: var(--accent-text); font-weight: 600; text-decoration: none; }
+    .note { color: var(--muted); font-size: 14px; }
+    .shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 32px 0 0; }
+    .shots img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; display: block; }
+    ul { padding-left: 20px; margin: 8px 0; }
+    li { margin: 4px 0; }
+    .features { columns: 2; column-gap: 32px; }
+    @media (max-width: 640px) {
+      .features { columns: 1; }
+      .shots { grid-template-columns: 1fr; }
+      h1 { font-size: 28px; }
+      header.top { flex-wrap: wrap; margin-bottom: 24px; }
+      nav.languages { margin-left: 0; width: 100%; }
+    }
+    .faq { border: 1px solid var(--line); border-radius: 8px; padding: 4px 16px 12px; margin: 12px 0; background: var(--card); }
+    .faq h3 { margin-top: 12px; }
+    footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+<main>
+  <header class="top">
+    <img src="../img/icon.png" alt="" width="40" height="40">
+    <strong>Gimbona</strong>
+    <nav class="languages" aria-label="Diller">
+      <a href="../" lang="en" hreflang="en">English</a>
+      <span aria-current="page">Türkçe</span>
+      <a href="../de/" lang="de" hreflang="de">Deutsch</a>
+      <a href="../es/" lang="es" hreflang="es">Español</a>
+      <a href="../fr/" lang="fr" hreflang="fr">Français</a>
+    </nav>
+  </header>
+
+  <h1>Windows için disk temizleme programı: C diskinde güvenle yer açın</h1>
+  <p class="lead">C diski doldu mu? Gimbona diskinizi neyin doldurduğunu gösterir ve temizlemenize yardım eder: gereksiz dosyalar, geçici dosyalar, önbellekler, Windows Update artıkları, büyük ve yinelenen dosyalar, kullanılmayan programlar ve yalnızca büyüyen sanal diskler. Tarama yalnızca ölçer; siz onaylamadan hiçbir şey silinmez.</p>
+  <a class="cta" href="https://apps.microsoft.com/detail/9NVVCPPHHFJR?cid=website&amp;hl=tr-TR">Gimbona'yı Microsoft Store'dan indirin</a>
+  <p class="note">Windows 10 ve Windows 11 için ücretsiz. Gimbona Pro isteğe bağlıdır; tek seferlik ödeme, abonelik yok.</p>
+
+  <div class="shots">
+    <img src="../img/tr/01-overview.png" alt="Gimbona genel bakış: Windows'ta açılabilecek disk alanı" width="1440" height="900">
+    <img src="../img/tr/02-clean.png" alt="Gimbona disk temizleme: güvenlik düzeyleriyle gereksiz dosyalar, geçici dosyalar ve önbellekler" width="1440" height="900" loading="lazy">
+    <img src="../img/tr/03-analyze.png" alt="Gimbona disk analizi: boyuta göre klasörler" width="1440" height="900" loading="lazy">
+    <img src="../img/tr/04-virtual-disks.png" alt="Gimbona sanal diskler: WSL, Docker ve Hyper-V disk boyutları" width="1440" height="900" loading="lazy">
+  </div>
+
+  <h2>Özellikler</h2>
+  <ul class="features">
+    <li>Her kalem için güvenlik düzeyiyle disk temizleme: Güvenli, Gözden geçir, İleri düzey</li>
+    <li>Tarama yalnızca ölçer; onayınız olmadan hiçbir şey silinmez</li>
+    <li>Windows, tarayıcı ve uygulamalar için gereksiz dosya, geçici dosya ve önbellek temizleme</li>
+    <li>Klasöre göre disk analizi ve en büyük dosyalar</li>
+    <li>Büyük ve eski dosya bulma</li>
+    <li>Yinelenen dosya bulma</li>
+    <li>Kaldırılmış programların kalıntıları</li>
+    <li>Kurulu programlar: boyut ve son çalıştırma</li>
+    <li>Kullanılmayan programları toplu kaldırma (Pro)</li>
+    <li>WSL, Docker ve Hyper-V sanal disklerini sıkıştırma (Pro)</li>
+    <li>Geliştirici ve oyun önbelleği temizliği (Pro)</li>
+    <li>Haftalık ya da aylık otomatik temizlik (Pro)</li>
+    <li>Windows bileşen deposu (WinSxS) ve hazırda bekletme dosyası temizliği (Pro)</li>
+    <li>Veri toplamaz; her şey bilgisayarınızda kalır</li>
+    <li>İngilizce, Almanca, İspanyolca, Fransızca ve Türkçe</li>
+    <li>Koyu, açık ve turkuaz temalar</li>
+  </ul>
+
+  <h2>Gimbona neleri temizler</h2>
+  <h3>Gereksiz dosya, geçici dosya ve önbellek temizleme</h3>
+  <p>Gimbona Windows geçici dosyalarını, çökme dökümlerini, küçük resim ve gölgelendirici önbelleklerini, Windows Update artıklarını; tarayıcıların (Chrome, Edge, Firefox, Brave, Opera) ve VS Code, Discord, Slack, Spotify gibi uygulamaların önbelleklerini bulur. Her kalemin ne kadar yer kapladığı ve güvenlik düzeyi görünür: Güvenli, Gözden geçir ya da İleri düzey.</p>
+  <h3>Disk analizi, büyük dosya bulma ve yinelenen dosya bulma</h3>
+  <p>Diskinizi hangi klasörlerin ve dosyaların doldurduğunu büyükten küçüğe görün. Kişisel klasörlerinizde büyük ve eski dosyaları, yinelenen dosyaları ve kaldırılmış programlardan kalan klasörleri arayın. Arama yalnızca listeler; seçtikleriniz Geri Dönüşüm Kutusu'na taşınır, oradan geri alabilirsiniz.</p>
+  <h3>WSL, Docker ve Hyper-V disklerini küçültme (VHDX)</h3>
+  <p>Sanal diskler içlerine veri yazıldıkça büyür ama veri silinince küçülmez. Gimbona WSL, Docker Desktop, Hyper-V, VirtualBox, VMware ve Android öykünücüsü disklerini boyutlarıyla listeler; Gimbona Pro ext4.vhdx ve diğer dinamik VHDX ve VHD dosyalarını sıkıştırıp içlerindeki boş alanı Windows'a geri verir. Diskin içindeki dosyalara dokunulmaz.</p>
+  <h3>Kullanmadığınız programları kaldırma</h3>
+  <p>Kurulu programlarınızı boyutlarıyla görün ve kaldırın. Gimbona yönetici olarak çalıştığında hangi programların 3, 6 ya da 12 aydır çalıştırılmadığını da gösterir. Programları tek tek kaldırmak ücretsizdir; Gimbona Pro birden çok programı tek seferde kaldırır. Sürücüler, çalışma zamanları ve güvenlik yazılımları listede yer almaz; yanlışlıkla kaldırılamazlar.</p>
+  <h3>Önce güvenlik</h3>
+  <p>Taramadan sonra yalnızca Güvenli kalemler seçili gelir; İleri düzey kalemler varsayılan olarak hiç seçilmez. Gimbona önce diskinizin sağlığına bakar: Windows sürücünün onarım gerektirdiğini bildiriyorsa temizlik yapılmaz. Verilerinizi toplamaz ve hiçbir yere göndermez.</p>
+
+  <h2>Sorular ve yanıtlar</h2>
+  <div class="faq">
+    <h3>C diski doldu, neyi güvenle silebilirim?</h3>
+    <p>Gimbona'nın Güvenli olarak işaretlediği kalemlerle başlayın: geçici dosyalar, önbellekler, çökme dökümleri ve Windows Update artıkları. Windows ve uygulamalarınız bunları gerektiğinde yeniden oluşturur. Tarama, hiçbir şey silinmeden önce her kalemin ne kadar yer açacağını gösterir.</p>
+  </div>
+  <div class="faq">
+    <h3>Geçici dosyaları ve önbellekleri silmek güvenli mi?</h3>
+    <p>Güvenli olarak işaretlenen kalemler için evet; uygulamalar bunları yeniden oluşturur, en fazla ilk açılış biraz yavaşlar. Gözden geçir kalemlerini silmek de güvenlidir ama bir şeyin yeniden indirilmesi ya da derlenmesi gerekir. İleri düzey kalemler ne olduklarını bilenler içindir.</p>
+  </div>
+  <div class="faq">
+    <h3>Dosya sildiğim halde WSL ya da Docker diski (ext4.vhdx) neden küçülmüyor?</h3>
+    <p>VHDX dosyası veri yazıldıkça büyür ama veri silinince küçülmez. Diski sıkıştırmak bu boş alanı Windows'a geri verir. Gimbona bir WSL diskinden ne kadar yer kazanılabileceğini gösterir, Gimbona Pro da diski sıkıştırır; işlem sırasında WSL kapatılır ve Gimbona bunu başlamadan önce size bildirir.</p>
+  </div>
+  <div class="faq">
+    <h3>Gimbona kendiliğinden bir şey siler mi?</h3>
+    <p>Hayır. Tarama yalnızca ölçer, temizlik yalnızca siz onaylayınca başlar. Otomatik temizlik isteğe bağlı bir Pro ayarıdır; varsayılan olarak kapalıdır ve yalnızca Güvenli kalemleri temizler.</p>
+  </div>
+  <div class="faq">
+    <h3>Gimbona ücretsiz mi?</h3>
+    <p>Evet. Disk analizi ile Windows, tarayıcı ve uygulama dosyalarının temizliği ücretsizdir. Gimbona Pro sanal disk sıkıştırma, geliştirici ve oyun önbellekleri, toplu kaldırma ve otomatik temizlik ekler; tek seferlik ödeme, abonelik yok.</p>
+  </div>
+  <div class="faq">
+    <h3>Gimbona verilerimi bir yere gönderiyor mu?</h3>
+    <p>Hayır. Tarama ve temizlik yalnızca bilgisayarınızda yapılır. Gimbona'da analiz, telemetri ya da reklam yoktur.</p>
+  </div>
+
+  <footer>
+    <p><a href="https://apps.microsoft.com/detail/9NVVCPPHHFJR?cid=website&amp;hl=tr-TR">Gimbona'yı Microsoft Store'dan indirin</a> · <a href="../privacy/#tr">Gizlilik Politikası</a> · <a href="mailto:aliyalinkilic@outlook.com">aliyalinkilic@outlook.com</a></p>
+    <p>© 2026 Ali Yalınkılıç</p>
+  </footer>
+</main>
+</body>
+</html>

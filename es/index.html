@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Liberar espacio en disco en Windows 10 y 11 – Gimbona</title>
+  <meta name="description" content="Gimbona es un limpiador de disco seguro para Windows: elimine archivos basura, temporales y cachés, busque archivos grandes y libere espacio en disco.">
+  <link rel="canonical" href="https://aliyalinkilic.github.io/gimbona/es/">
+  <link rel="alternate" hreflang="en" href="https://aliyalinkilic.github.io/gimbona/">
+  <link rel="alternate" hreflang="tr" href="https://aliyalinkilic.github.io/gimbona/tr/">
+  <link rel="alternate" hreflang="de" href="https://aliyalinkilic.github.io/gimbona/de/">
+  <link rel="alternate" hreflang="es" href="https://aliyalinkilic.github.io/gimbona/es/">
+  <link rel="alternate" hreflang="fr" href="https://aliyalinkilic.github.io/gimbona/fr/">
+  <link rel="alternate" hreflang="x-default" href="https://aliyalinkilic.github.io/gimbona/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Liberar espacio en disco en Windows 10 y 11 – Gimbona">
+  <meta property="og:description" content="Gimbona es un limpiador de disco seguro para Windows: elimine archivos basura, temporales y cachés, busque archivos grandes y libere espacio en disco.">
+  <meta property="og:url" content="https://aliyalinkilic.github.io/gimbona/es/">
+  <meta property="og:image" content="https://aliyalinkilic.github.io/gimbona/img/es/01-overview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../img/icon.png">
+  <script type="application/ld+json">
+{
+    "@context":  "https://schema.org",
+    "@graph":  [
+                   {
+                       "@type":  "SoftwareApplication",
+                       "name":  "Gimbona",
+                       "description":  "Gimbona es un limpiador de disco seguro para Windows: elimine archivos basura, temporales y cachés, busque archivos grandes y libere espacio en disco.",
+                       "url":  "https://aliyalinkilic.github.io/gimbona/es/",
+                       "image":  "https://aliyalinkilic.github.io/gimbona/img/icon.png",
+                       "screenshot":  [
+                                          "https://aliyalinkilic.github.io/gimbona/img/es/01-overview.png",
+                                          "https://aliyalinkilic.github.io/gimbona/img/es/02-clean.png",
+                                          "https://aliyalinkilic.github.io/gimbona/img/es/03-analyze.png",
+                                          "https://aliyalinkilic.github.io/gimbona/img/es/04-virtual-disks.png"
+                                      ],
+                       "operatingSystem":  "Windows 10, Windows 11",
+                       "applicationCategory":  "UtilitiesApplication",
+                       "inLanguage":  [
+                                          "en",
+                                          "tr",
+                                          "de",
+                                          "es",
+                                          "fr"
+                                      ],
+                       "installUrl":  "https://apps.microsoft.com/detail/9NVVCPPHHFJR?cid=website\u0026hl=es-ES",
+                       "offers":  {
+                                      "@type":  "Offer",
+                                      "price":  "0",
+                                      "priceCurrency":  "USD"
+                                  },
+                       "author":  {
+                                      "@type":  "Person",
+                                      "name":  "Ali Yalınkılıç"
+                                  }
+                   },
+                   {
+                       "@type":  "FAQPage",
+                       "inLanguage":  "es",
+                       "mainEntity":  [
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "El disco C está lleno. ¿Qué puedo eliminar sin riesgo?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Empiece por los elementos que Gimbona marca como Seguro: archivos temporales, cachés, volcados de errores y restos de Windows Update. Windows y sus aplicaciones los vuelven a crear cuando hacen falta. El análisis muestra cuánto espacio liberaría cada elemento antes de eliminar nada."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "¿Es seguro borrar los archivos temporales y las cachés?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Sí en los elementos marcados como Seguro; las aplicaciones los vuelven a crear y, como mucho, el primer inicio es algo más lento. Los elementos marcados como Revisar también se pueden eliminar sin riesgo, pero habrá que volver a descargar o generar algo. Los elementos avanzados son para quien sabe qué son."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "¿Por qué mi disco de WSL o Docker (ext4.vhdx) sigue siendo enorme después de borrar archivos?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Un archivo VHDX crece cuando se escriben datos, pero no se reduce cuando se eliminan. Compactar el disco devuelve ese espacio libre a Windows. Gimbona muestra cuánto puede devolver un disco de WSL y Gimbona Pro lo compacta; WSL se apaga mientras tanto, y Gimbona se lo indica antes de empezar."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "¿Gimbona elimina algo por su cuenta?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "No. El análisis solo mide y la limpieza empieza únicamente cuando usted confirma. La limpieza automática es un ajuste opcional de Pro, desactivado de forma predeterminada, que solo limpia los elementos seguros."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "¿Gimbona es gratis?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Sí. El análisis del disco y la limpieza de archivos de Windows, navegadores y aplicaciones son gratis. Gimbona Pro añade la compactación de discos virtuales, las cachés de desarrollo y de juegos, la desinstalación de varios programas y la limpieza automática, con un pago único y sin suscripción."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "¿Gimbona envía mis datos a algún sitio?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "No. El análisis y la limpieza se hacen solo en su PC. Gimbona no incluye análisis de uso, telemetría ni publicidad."
+                                                                 }
+                                          }
+                                      ]
+                   }
+               ]
+}
+  </script>
+  <style>
+    :root { color-scheme: light dark; --text: #1b1f23; --muted: #57606a; --accent: #0e7c86; --accent-text: #ffffff; --bg: #ffffff; --card: #f6f8fa; --line: #d8dee4; }
+    @media (prefers-color-scheme: dark) {
+      :root { --text: #e6edf3; --muted: #9da7b1; --accent: #4fd1c5; --accent-text: #0d1117; --bg: #0d1117; --card: #161b22; --line: #30363d; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 "Segoe UI", system-ui, sans-serif; }
+    main { max-width: 920px; margin: 0 auto; padding: 48px 16px 32px; }
+    header.top { display: flex; align-items: center; gap: 12px; margin-bottom: 40px; }
+    header.top img { width: 40px; height: 40px; }
+    header.top strong { font-size: 20px; }
+    nav.languages { margin-left: auto; display: flex; gap: 12px; flex-wrap: wrap; font-size: 14px; }
+    h1 { font-size: 36px; line-height: 1.2; margin: 0 0 16px; }
+    h2 { font-size: 24px; margin: 48px 0 12px; }
+    h3 { font-size: 16px; margin: 24px 0 8px; letter-spacing: .02em; }
+    p { margin: 8px 0; }
+    a { color: var(--accent); }
+    .lead { font-size: 18px; color: var(--muted); max-width: 720px; }
+    .cta { display: inline-block; margin: 24px 0 8px; padding: 12px 22px; border-radius: 8px; background: var(--accent); color: var(--accent-text); font-weight: 600; text-decoration: none; }
+    .note { color: var(--muted); font-size: 14px; }
+    .shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 32px 0 0; }
+    .shots img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; display: block; }
+    ul { padding-left: 20px; margin: 8px 0; }
+    li { margin: 4px 0; }
+    .features { columns: 2; column-gap: 32px; }
+    @media (max-width: 640px) {
+      .features { columns: 1; }
+      .shots { grid-template-columns: 1fr; }
+      h1 { font-size: 28px; }
+      header.top { flex-wrap: wrap; margin-bottom: 24px; }
+      nav.languages { margin-left: 0; width: 100%; }
+    }
+    .faq { border: 1px solid var(--line); border-radius: 8px; padding: 4px 16px 12px; margin: 12px 0; background: var(--card); }
+    .faq h3 { margin-top: 12px; }
+    footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+<main>
+  <header class="top">
+    <img src="../img/icon.png" alt="" width="40" height="40">
+    <strong>Gimbona</strong>
+    <nav class="languages" aria-label="Idiomas">
+      <a href="../" lang="en" hreflang="en">English</a>
+      <a href="../tr/" lang="tr" hreflang="tr">Türkçe</a>
+      <a href="../de/" lang="de" hreflang="de">Deutsch</a>
+      <span aria-current="page">Español</span>
+      <a href="../fr/" lang="fr" hreflang="fr">Français</a>
+    </nav>
+  </header>
+
+  <h1>Liberar espacio en disco en Windows, de forma segura</h1>
+  <p class="lead">¿El disco C está lleno? Gimbona muestra qué ocupa su unidad y le ayuda a limpiarla: archivos basura, archivos temporales, cachés, restos de Windows Update, archivos grandes y duplicados, programas que no usa y discos virtuales que no dejan de crecer. El análisis solo mide; nada se elimina sin su confirmación.</p>
+  <a class="cta" href="https://apps.microsoft.com/detail/9NVVCPPHHFJR?cid=website&amp;hl=es-ES">Descargar Gimbona en Microsoft Store</a>
+  <p class="note">Gratis para Windows 10 y Windows 11. Gimbona Pro es una compra única opcional, sin suscripción.</p>
+
+  <div class="shots">
+    <img src="../img/es/01-overview.png" alt="Resumen de Gimbona: espacio en disco que se puede liberar en Windows" width="1440" height="900">
+    <img src="../img/es/02-clean.png" alt="Limpieza de disco con Gimbona: archivos basura, temporales y cachés con niveles de seguridad" width="1440" height="900" loading="lazy">
+    <img src="../img/es/03-analyze.png" alt="Analizador de disco de Gimbona: carpetas por tamaño" width="1440" height="900" loading="lazy">
+    <img src="../img/es/04-virtual-disks.png" alt="Discos virtuales en Gimbona: tamaño de los discos de WSL, Docker e Hyper-V" width="1440" height="900" loading="lazy">
+  </div>
+
+  <h2>Características</h2>
+  <ul class="features">
+    <li>Limpieza de disco con un nivel de seguridad para cada elemento: Seguro, Revisar, Avanzado</li>
+    <li>El examen solo mide; no se elimina nada sin su confirmación</li>
+    <li>Limpieza de archivos basura, archivos temporales y cachés de Windows, navegadores y aplicaciones</li>
+    <li>Analizador de disco por carpetas, con los archivos más grandes</li>
+    <li>Buscador de archivos grandes y antiguos</li>
+    <li>Buscador de archivos duplicados</li>
+    <li>Restos de programas desinstalados</li>
+    <li>Programas instalados por tamaño y última ejecución</li>
+    <li>Desinstalar en bloque los programas que no usa (Pro)</li>
+    <li>Compactar discos virtuales de WSL, Docker y Hyper-V (Pro)</li>
+    <li>Limpieza de cachés de desarrollo y de juegos (Pro)</li>
+    <li>Limpieza automática semanal o mensual (Pro)</li>
+    <li>Limpieza del almacén de componentes de Windows (WinSxS) y del archivo de hibernación (Pro)</li>
+    <li>Sin recopilación de datos; todo permanece en su equipo</li>
+    <li>Inglés, alemán, español, francés y turco</li>
+    <li>Temas oscuro, claro y turquesa</li>
+  </ul>
+
+  <h2>Qué limpia Gimbona</h2>
+  <h3>Eliminar archivos basura, temporales y cachés</h3>
+  <p>Gimbona encuentra los archivos temporales de Windows, los volcados de errores, las cachés de miniaturas y de sombreadores y los restos de Windows Update, además de las cachés de los navegadores (Chrome, Edge, Firefox, Brave, Opera) y de aplicaciones como VS Code, Discord, Slack y Spotify. Cada elemento muestra cuánto ocupa y un nivel de seguridad: Seguro, Revisar o Avanzado.</p>
+  <h3>Analizador de disco, buscador de archivos grandes y duplicados</h3>
+  <p>Vea qué carpetas y archivos ocupan su unidad, de mayor a menor. Busque en sus carpetas personales archivos grandes y antiguos y archivos duplicados, y localice las carpetas que dejaron los programas desinstalados. La búsqueda solo enumera; lo que seleccione se mueve a la Papelera de reciclaje, de donde puede restaurarlo.</p>
+  <h3>Reducir los discos de WSL, Docker e Hyper-V (VHDX)</h3>
+  <p>Los discos virtuales crecen cuando se escriben datos, pero no se reducen cuando se eliminan. Gimbona enumera los discos de WSL, Docker Desktop, Hyper-V, VirtualBox, VMware y los emuladores de Android con su tamaño; Gimbona Pro compacta ext4.vhdx y otros archivos VHDX y VHD dinámicos y devuelve a Windows el espacio libre que contienen. Los archivos del interior del disco no se tocan.</p>
+  <h3>Desinstalar los programas que ya no usa</h3>
+  <p>Vea sus programas instalados por tamaño y quítelos. Cuando Gimbona se ejecuta como administrador, muestra además qué programas no se han ejecutado en 3, 6 o 12 meses. Quitar los programas de uno en uno es gratis; Gimbona Pro quita varios de una vez. Los controladores, los entornos de ejecución y el software de seguridad no aparecen en la lista, por lo que no pueden quitarse por error.</p>
+  <h3>La seguridad primero</h3>
+  <p>Tras el análisis solo quedan seleccionados los elementos seguros; los avanzados nunca se seleccionan de forma predeterminada. Gimbona comprueba primero el estado del disco: si Windows indica que la unidad necesita reparación, no se limpia. No recopila sus datos ni los envía a ningún sitio.</p>
+
+  <h2>Preguntas y respuestas</h2>
+  <div class="faq">
+    <h3>El disco C está lleno. ¿Qué puedo eliminar sin riesgo?</h3>
+    <p>Empiece por los elementos que Gimbona marca como Seguro: archivos temporales, cachés, volcados de errores y restos de Windows Update. Windows y sus aplicaciones los vuelven a crear cuando hacen falta. El análisis muestra cuánto espacio liberaría cada elemento antes de eliminar nada.</p>
+  </div>
+  <div class="faq">
+    <h3>¿Es seguro borrar los archivos temporales y las cachés?</h3>
+    <p>Sí en los elementos marcados como Seguro; las aplicaciones los vuelven a crear y, como mucho, el primer inicio es algo más lento. Los elementos marcados como Revisar también se pueden eliminar sin riesgo, pero habrá que volver a descargar o generar algo. Los elementos avanzados son para quien sabe qué son.</p>
+  </div>
+  <div class="faq">
+    <h3>¿Por qué mi disco de WSL o Docker (ext4.vhdx) sigue siendo enorme después de borrar archivos?</h3>
+    <p>Un archivo VHDX crece cuando se escriben datos, pero no se reduce cuando se eliminan. Compactar el disco devuelve ese espacio libre a Windows. Gimbona muestra cuánto puede devolver un disco de WSL y Gimbona Pro lo compacta; WSL se apaga mientras tanto, y Gimbona se lo indica antes de empezar.</p>
+  </div>
+  <div class="faq">
+    <h3>¿Gimbona elimina algo por su cuenta?</h3>
+    <p>No. El análisis solo mide y la limpieza empieza únicamente cuando usted confirma. La limpieza automática es un ajuste opcional de Pro, desactivado de forma predeterminada, que solo limpia los elementos seguros.</p>
+  </div>
+  <div class="faq">
+    <h3>¿Gimbona es gratis?</h3>
+    <p>Sí. El análisis del disco y la limpieza de archivos de Windows, navegadores y aplicaciones son gratis. Gimbona Pro añade la compactación de discos virtuales, las cachés de desarrollo y de juegos, la desinstalación de varios programas y la limpieza automática, con un pago único y sin suscripción.</p>
+  </div>
+  <div class="faq">
+    <h3>¿Gimbona envía mis datos a algún sitio?</h3>
+    <p>No. El análisis y la limpieza se hacen solo en su PC. Gimbona no incluye análisis de uso, telemetría ni publicidad.</p>
+  </div>
+
+  <footer>
+    <p><a href="https://apps.microsoft.com/detail/9NVVCPPHHFJR?cid=website&amp;hl=es-ES">Descargar Gimbona en Microsoft Store</a> · <a href="../privacy/#es">Política de privacidad</a> · <a href="mailto:aliyalinkilic@outlook.com">aliyalinkilic@outlook.com</a></p>
+    <p>© 2026 Ali Yalınkılıç</p>
+  </footer>
+</main>
+</body>
+</html>

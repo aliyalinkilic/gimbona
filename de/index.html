@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Datenträgerbereinigung &amp; Speicherplatz freigeben – Gimbona</title>
+  <meta name="description" content="Gimbona ist eine sichere Datenträgerbereinigung für Windows 10 und 11: temporäre Dateien und Caches löschen, große Dateien finden, Speicherplatz freigeben.">
+  <link rel="canonical" href="https://aliyalinkilic.github.io/gimbona/de/">
+  <link rel="alternate" hreflang="en" href="https://aliyalinkilic.github.io/gimbona/">
+  <link rel="alternate" hreflang="tr" href="https://aliyalinkilic.github.io/gimbona/tr/">
+  <link rel="alternate" hreflang="de" href="https://aliyalinkilic.github.io/gimbona/de/">
+  <link rel="alternate" hreflang="es" href="https://aliyalinkilic.github.io/gimbona/es/">
+  <link rel="alternate" hreflang="fr" href="https://aliyalinkilic.github.io/gimbona/fr/">
+  <link rel="alternate" hreflang="x-default" href="https://aliyalinkilic.github.io/gimbona/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Datenträgerbereinigung &amp; Speicherplatz freigeben – Gimbona">
+  <meta property="og:description" content="Gimbona ist eine sichere Datenträgerbereinigung für Windows 10 und 11: temporäre Dateien und Caches löschen, große Dateien finden, Speicherplatz freigeben.">
+  <meta property="og:url" content="https://aliyalinkilic.github.io/gimbona/de/">
+  <meta property="og:image" content="https://aliyalinkilic.github.io/gimbona/img/de/01-overview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../img/icon.png">
+  <script type="application/ld+json">
+{
+    "@context":  "https://schema.org",
+    "@graph":  [
+                   {
+                       "@type":  "SoftwareApplication",
+                       "name":  "Gimbona",
+                       "description":  "Gimbona ist eine sichere Datenträgerbereinigung für Windows 10 und 11: temporäre Dateien und Caches löschen, große Dateien finden, Speicherplatz freigeben.",
+                       "url":  "https://aliyalinkilic.github.io/gimbona/de/",
+                       "image":  "https://aliyalinkilic.github.io/gimbona/img/icon.png",
+                       "screenshot":  [
+                                          "https://aliyalinkilic.github.io/gimbona/img/de/01-overview.png",
+                                          "https://aliyalinkilic.github.io/gimbona/img/de/02-clean.png",
+                                          "https://aliyalinkilic.github.io/gimbona/img/de/03-analyze.png",
+                                          "https://aliyalinkilic.github.io/gimbona/img/de/04-virtual-disks.png"
+                                      ],
+                       "operatingSystem":  "Windows 10, Windows 11",
+                       "applicationCategory":  "UtilitiesApplication",
+                       "inLanguage":  [
+                                          "en",
+                                          "tr",
+                                          "de",
+                                          "es",
+                                          "fr"
+                                      ],
+                       "installUrl":  "https://apps.microsoft.com/detail/9NVVCPPHHFJR?cid=website\u0026hl=de-DE",
+                       "offers":  {
+                                      "@type":  "Offer",
+                                      "price":  "0",
+                                      "priceCurrency":  "USD"
+                                  },
+                       "author":  {
+                                      "@type":  "Person",
+                                      "name":  "Ali Yalınkılıç"
+                                  }
+                   },
+                   {
+                       "@type":  "FAQPage",
+                       "inLanguage":  "de",
+                       "mainEntity":  [
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Laufwerk C ist voll. Was kann ich gefahrlos löschen?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Beginnen Sie mit den Einträgen, die Gimbona als Sicher kennzeichnet: temporäre Dateien, Caches, Absturzabbilder und Reste von Windows Update. Windows und Ihre Apps legen sie bei Bedarf neu an. Der Scan zeigt, wie viel Platz jeder Eintrag freigibt, bevor irgendetwas gelöscht wird."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Ist es sicher, temporäre Dateien und Caches zu löschen?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Bei den als Sicher gekennzeichneten Einträgen ja; Apps legen sie neu an, höchstens der erste Start dauert etwas länger. Auch Einträge der Stufe Prüfen lassen sich gefahrlos löschen, aber etwas muss erneut heruntergeladen oder erstellt werden. Einträge der Stufe Erweitert sind für Nutzer gedacht, die wissen, worum es sich handelt."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Warum ist mein WSL- oder Docker-Datenträger (ext4.vhdx) noch riesig, obwohl ich Dateien gelöscht habe?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Eine VHDX-Datei wächst, wenn Daten geschrieben werden, schrumpft aber nicht, wenn Daten gelöscht werden. Das Komprimieren gibt diesen freien Platz an Windows zurück. Gimbona zeigt, wie viel ein WSL-Datenträger zurückgeben kann, und Gimbona Pro komprimiert ihn; WSL wird dafür heruntergefahren, und Gimbona sagt es Ihnen, bevor es beginnt."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Löscht Gimbona etwas von selbst?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Nein. Der Scan misst nur, und bereinigt wird erst, wenn Sie bestätigen. Die automatische Bereinigung ist eine optionale Pro-Einstellung, standardmäßig ausgeschaltet, und bereinigt nur sichere Einträge."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Ist Gimbona kostenlos?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Ja. Die Speicherplatzanalyse und die Bereinigung von Windows-, Browser- und App-Dateien sind kostenlos. Gimbona Pro ergänzt das Komprimieren virtueller Datenträger, Entwickler- und Spiele-Caches, das Entfernen mehrerer Programme und die automatische Bereinigung – als Einmalkauf, ohne Abo."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Sendet Gimbona meine Daten irgendwohin?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Nein. Scan und Bereinigung finden nur auf Ihrem PC statt. Gimbona enthält weder Nutzungsanalyse noch Telemetrie oder Werbung."
+                                                                 }
+                                          }
+                                      ]
+                   }
+               ]
+}
+  </script>
+  <style>
+    :root { color-scheme: light dark; --text: #1b1f23; --muted: #57606a; --accent: #0e7c86; --accent-text: #ffffff; --bg: #ffffff; --card: #f6f8fa; --line: #d8dee4; }
+    @media (prefers-color-scheme: dark) {
+      :root { --text: #e6edf3; --muted: #9da7b1; --accent: #4fd1c5; --accent-text: #0d1117; --bg: #0d1117; --card: #161b22; --line: #30363d; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 "Segoe UI", system-ui, sans-serif; }
+    main { max-width: 920px; margin: 0 auto; padding: 48px 16px 32px; }
+    header.top { display: flex; align-items: center; gap: 12px; margin-bottom: 40px; }
+    header.top img { width: 40px; height: 40px; }
+    header.top strong { font-size: 20px; }
+    nav.languages { margin-left: auto; display: flex; gap: 12px; flex-wrap: wrap; font-size: 14px; }
+    h1 { font-size: 36px; line-height: 1.2; margin: 0 0 16px; }
+    h2 { font-size: 24px; margin: 48px 0 12px; }
+    h3 { font-size: 16px; margin: 24px 0 8px; letter-spacing: .02em; }
+    p { margin: 8px 0; }
+    a { color: var(--accent); }
+    .lead { font-size: 18px; color: var(--muted); max-width: 720px; }
+    .cta { display: inline-block; margin: 24px 0 8px; padding: 12px 22px; border-radius: 8px; background: var(--accent); color: var(--accent-text); font-weight: 600; text-decoration: none; }
+    .note { color: var(--muted); font-size: 14px; }
+    .shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 32px 0 0; }
+    .shots img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; display: block; }
+    ul { padding-left: 20px; margin: 8px 0; }
+    li { margin: 4px 0; }
+    .features { columns: 2; column-gap: 32px; }
+    @media (max-width: 640px) {
+      .features { columns: 1; }
+      .shots { grid-template-columns: 1fr; }
+      h1 { font-size: 28px; }
+      header.top { flex-wrap: wrap; margin-bottom: 24px; }
+      nav.languages { margin-left: 0; width: 100%; }
+    }
+    .faq { border: 1px solid var(--line); border-radius: 8px; padding: 4px 16px 12px; margin: 12px 0; background: var(--card); }
+    .faq h3 { margin-top: 12px; }
+    footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+<main>
+  <header class="top">
+    <img src="../img/icon.png" alt="" width="40" height="40">
+    <strong>Gimbona</strong>
+    <nav class="languages" aria-label="Sprachen">
+      <a href="../" lang="en" hreflang="en">English</a>
+      <a href="../tr/" lang="tr" hreflang="tr">Türkçe</a>
+      <span aria-current="page">Deutsch</span>
+      <a href="../es/" lang="es" hreflang="es">Español</a>
+      <a href="../fr/" lang="fr" hreflang="fr">Français</a>
+    </nav>
+  </header>
+
+  <h1>Datenträgerbereinigung für Windows: sicher Speicherplatz freigeben</h1>
+  <p class="lead">Festplatte voll? Gimbona zeigt, was Ihr Laufwerk füllt, und hilft beim Bereinigen: Datenmüll, temporäre Dateien, Caches, Reste von Windows Update, große und doppelte Dateien, ungenutzte Programme und virtuelle Datenträger, die immer nur wachsen. Der Scan misst nur; ohne Ihre Bestätigung wird nichts gelöscht.</p>
+  <a class="cta" href="https://apps.microsoft.com/detail/9NVVCPPHHFJR?cid=website&amp;hl=de-DE">Gimbona im Microsoft Store herunterladen</a>
+  <p class="note">Kostenlos für Windows 10 und Windows 11. Gimbona Pro ist ein optionaler Einmalkauf, kein Abo.</p>
+
+  <div class="shots">
+    <img src="../img/de/01-overview.png" alt="Gimbona Übersicht: Speicherplatz, der unter Windows freigegeben werden kann" width="1440" height="900">
+    <img src="../img/de/02-clean.png" alt="Gimbona Datenträgerbereinigung: temporäre Dateien und Caches mit Sicherheitsstufen" width="1440" height="900" loading="lazy">
+    <img src="../img/de/03-analyze.png" alt="Gimbona Speicherplatzanalyse: Ordner nach Größe" width="1440" height="900" loading="lazy">
+    <img src="../img/de/04-virtual-disks.png" alt="Gimbona virtuelle Datenträger: Größe von WSL-, Docker- und Hyper-V-Datenträgern" width="1440" height="900" loading="lazy">
+  </div>
+
+  <h2>Funktionen</h2>
+  <ul class="features">
+    <li>Datenträgerbereinigung mit Sicherheitsstufe für jedes Element: Sicher, Prüfen, Erweitert</li>
+    <li>Beim Scannen wird nur gemessen; ohne Ihre Bestätigung wird nichts gelöscht</li>
+    <li>Datenmüll, temporäre Dateien und Caches von Windows, Browsern und Apps bereinigen</li>
+    <li>Speicherplatz analysieren nach Ordnern, mit den größten Dateien</li>
+    <li>Große und alte Dateien finden</li>
+    <li>Doppelte Dateien finden</li>
+    <li>Überreste deinstallierter Programme</li>
+    <li>Installierte Programme nach Größe und letzter Ausführung</li>
+    <li>Ungenutzte Programme gesammelt deinstallieren (Pro)</li>
+    <li>Virtuelle WSL-, Docker- und Hyper-V-Datenträger komprimieren (Pro)</li>
+    <li>Bereinigung von Entwickler- und Spiele-Caches (Pro)</li>
+    <li>Automatische Bereinigung, wöchentlich oder monatlich (Pro)</li>
+    <li>Bereinigung von Windows-Komponentenspeicher (WinSxS) und Ruhezustandsdatei (Pro)</li>
+    <li>Keine Datenerfassung; alles bleibt auf Ihrem PC</li>
+    <li>Englisch, Deutsch, Spanisch, Französisch und Türkisch</li>
+    <li>Dunkles, helles und türkisfarbenes Design</li>
+  </ul>
+
+  <h2>Was Gimbona bereinigt</h2>
+  <h3>Temporäre Dateien, Datenmüll und Caches löschen</h3>
+  <p>Gimbona findet temporäre Windows-Dateien, Absturzabbilder, Miniaturansichten- und Shader-Caches und Reste von Windows Update sowie die Caches von Browsern (Chrome, Edge, Firefox, Brave, Opera) und Apps wie VS Code, Discord, Slack und Spotify. Jeder Eintrag zeigt seinen Platzbedarf und eine Sicherheitsstufe: Sicher, Prüfen oder Erweitert.</p>
+  <h3>Speicherplatz analysieren, große und doppelte Dateien finden</h3>
+  <p>Sehen Sie, welche Ordner und Dateien Ihr Laufwerk belegen, die größten zuerst. Durchsuchen Sie Ihre persönlichen Ordner nach großen und alten Dateien und nach doppelten Dateien, und finden Sie Ordner, die deinstallierte Programme zurückgelassen haben. Die Suche listet nur auf; was Sie auswählen, wird in den Papierkorb verschoben und lässt sich dort wiederherstellen.</p>
+  <h3>WSL-, Docker- und Hyper-V-Datenträger verkleinern (VHDX)</h3>
+  <p>Virtuelle Datenträger wachsen, wenn Daten geschrieben werden, schrumpfen aber nicht, wenn Daten gelöscht werden. Gimbona listet die Datenträger von WSL, Docker Desktop, Hyper-V, VirtualBox, VMware und Android-Emulatoren mit ihrer Größe auf; Gimbona Pro komprimiert ext4.vhdx und andere dynamische VHDX- und VHD-Dateien und gibt den freien Platz darin an Windows zurück. Die Dateien im Datenträger werden nicht angetastet.</p>
+  <h3>Ungenutzte Programme deinstallieren</h3>
+  <p>Sehen Sie Ihre installierten Programme nach Größe und entfernen Sie sie. Läuft Gimbona als Administrator, zeigt es auch, welche Programme seit 3, 6 oder 12 Monaten nicht gestartet wurden. Einzelne Programme zu entfernen ist kostenlos; Gimbona Pro entfernt mehrere in einem Durchgang. Treiber, Laufzeitumgebungen und Sicherheitssoftware werden nicht aufgeführt und können daher nicht versehentlich entfernt werden.</p>
+  <h3>Sicherheit zuerst</h3>
+  <p>Nach dem Scan sind nur sichere Einträge ausgewählt; erweiterte Einträge sind nie vorausgewählt. Gimbona prüft zuerst den Zustand Ihres Datenträgers: Meldet Windows, dass das Laufwerk repariert werden muss, wird nicht bereinigt. Gimbona sammelt keine Daten und sendet nichts.</p>
+
+  <h2>Fragen und Antworten</h2>
+  <div class="faq">
+    <h3>Laufwerk C ist voll. Was kann ich gefahrlos löschen?</h3>
+    <p>Beginnen Sie mit den Einträgen, die Gimbona als Sicher kennzeichnet: temporäre Dateien, Caches, Absturzabbilder und Reste von Windows Update. Windows und Ihre Apps legen sie bei Bedarf neu an. Der Scan zeigt, wie viel Platz jeder Eintrag freigibt, bevor irgendetwas gelöscht wird.</p>
+  </div>
+  <div class="faq">
+    <h3>Ist es sicher, temporäre Dateien und Caches zu löschen?</h3>
+    <p>Bei den als Sicher gekennzeichneten Einträgen ja; Apps legen sie neu an, höchstens der erste Start dauert etwas länger. Auch Einträge der Stufe Prüfen lassen sich gefahrlos löschen, aber etwas muss erneut heruntergeladen oder erstellt werden. Einträge der Stufe Erweitert sind für Nutzer gedacht, die wissen, worum es sich handelt.</p>
+  </div>
+  <div class="faq">
+    <h3>Warum ist mein WSL- oder Docker-Datenträger (ext4.vhdx) noch riesig, obwohl ich Dateien gelöscht habe?</h3>
+    <p>Eine VHDX-Datei wächst, wenn Daten geschrieben werden, schrumpft aber nicht, wenn Daten gelöscht werden. Das Komprimieren gibt diesen freien Platz an Windows zurück. Gimbona zeigt, wie viel ein WSL-Datenträger zurückgeben kann, und Gimbona Pro komprimiert ihn; WSL wird dafür heruntergefahren, und Gimbona sagt es Ihnen, bevor es beginnt.</p>
+  </div>
+  <div class="faq">
+    <h3>Löscht Gimbona etwas von selbst?</h3>
+    <p>Nein. Der Scan misst nur, und bereinigt wird erst, wenn Sie bestätigen. Die automatische Bereinigung ist eine optionale Pro-Einstellung, standardmäßig ausgeschaltet, und bereinigt nur sichere Einträge.</p>
+  </div>
+  <div class="faq">
+    <h3>Ist Gimbona kostenlos?</h3>
+    <p>Ja. Die Speicherplatzanalyse und die Bereinigung von Windows-, Browser- und App-Dateien sind kostenlos. Gimbona Pro ergänzt das Komprimieren virtueller Datenträger, Entwickler- und Spiele-Caches, das Entfernen mehrerer Programme und die automatische Bereinigung – als Einmalkauf, ohne Abo.</p>
+  </div>
+  <div class="faq">
+    <h3>Sendet Gimbona meine Daten irgendwohin?</h3>
+    <p>Nein. Scan und Bereinigung finden nur auf Ihrem PC statt. Gimbona enthält weder Nutzungsanalyse noch Telemetrie oder Werbung.</p>
+  </div>
+
+  <footer>
+    <p><a href="https://apps.microsoft.com/detail/9NVVCPPHHFJR?cid=website&amp;hl=de-DE">Gimbona im Microsoft Store herunterladen</a> · <a href="../privacy/#de">Datenschutzerklärung</a> · <a href="mailto:aliyalinkilic@outlook.com">aliyalinkilic@outlook.com</a></p>
+    <p>© 2026 Ali Yalınkılıç</p>
+  </footer>
+</main>
+</body>
+</html>
